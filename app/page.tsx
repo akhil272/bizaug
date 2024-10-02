@@ -1,8 +1,11 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+const ThreeScene = dynamic(() => import("@/components/ThreeScene"), {
+  ssr: false,
+});
+
 export default function Home() {
-  return (
-    <main>
-      <h1>BizAug</h1>
-      <p>Business Augmentation</p>
-    </main>
-  );
+  return <ThreeScene />;
 }
