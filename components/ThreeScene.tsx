@@ -1,9 +1,10 @@
 import * as THREE from "three";
-import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
-import { Outlines, Environment, useTexture, Html } from "@react-three/drei";
-import { Physics, useSphere } from "@react-three/cannon";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Outlines, Environment, Text } from "@react-three/drei";
+import { Physics, useSphere, useBox } from "@react-three/cannon";
 import { EffectComposer, N8AO, SMAA } from "@react-three/postprocessing";
 
+const sphereCount = 40;
 const rfs = THREE.MathUtils.randFloatSpread;
 const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
 const baubleMaterial = new THREE.MeshStandardMaterial({
@@ -12,12 +13,40 @@ const baubleMaterial = new THREE.MeshStandardMaterial({
   envMapIntensity: 1,
 });
 
-function Clump({
-  mat = new THREE.Matrix4(),
-  vec = new THREE.Vector3(),
-  ...props
-}) {
-  // const texture = useTexture("/bizaug-logo.jpg");
+function CollisionLayer({ position }: { position: [number, number, number] }) {
+  const [ref] = useBox(() => ({
+    args: [8, 2, -0.5],
+    position,
+    type: "Static",
+  }));
+
+  return (
+    <mesh ref={ref as never} visible={false}>
+      <boxGeometry args={[8, 2, -0.5]} />
+    </mesh>
+  );
+}
+
+function TextCollider() {
+  const numberOfLayers = 10;
+  const layerSpacing = 0.2;
+
+  const layers = Array.from({ length: numberOfLayers }, (_, i) => {
+    const zPos = 4 + (i - numberOfLayers / 2) * layerSpacing;
+    return <CollisionLayer key={i} position={[0, 0, zPos]} />;
+  });
+
+  return (
+    <group>
+      <Text fontSize={0.5} position={[0, 0, 4]}>
+        BizAug
+      </Text>
+      {layers}
+    </group>
+  );
+}
+
+function Clump({ mat = new THREE.Matrix4(), vec = new THREE.Vector3() }) {
   const [ref, api] = useSphere(() => ({
     args: [1],
     mass: 1,
@@ -26,9 +55,12 @@ function Clump({
     position: [rfs(20), rfs(20), rfs(20)],
   }));
 
-  useFrame((state) => {
-    for (let i = 0; i < 40; i++) {
-      ref.current.getMatrixAt(i, mat);
+  useFrame(() => {
+    const instancedMesh = ref.current as THREE.InstancedMesh;
+    if (!instancedMesh) return;
+
+    for (let i = 0; i < sphereCount; i++) {
+      instancedMesh.getMatrixAt(i, mat);
       api
         .at(i)
         .applyForce(
@@ -44,11 +76,10 @@ function Clump({
 
   return (
     <instancedMesh
-      ref={ref}
+      ref={ref as never}
       castShadow
       receiveShadow
-      args={[sphereGeometry, baubleMaterial, 40]}
-      // material-map={texture}
+      args={[sphereGeometry, baubleMaterial, sphereCount]}
     >
       <Outlines thickness={0.02} />
     </instancedMesh>
@@ -62,10 +93,11 @@ function Pointer() {
     args: [4],
     position: [0, 0, 0],
   }));
+
   return useFrame((state) =>
     api.position.set(
-      (state.mouse.x * viewport.width) / 2,
-      (state.mouse.y * viewport.height) / 2,
+      (state.pointer.x * viewport.width) / 2,
+      (state.pointer.y * viewport.height) / 2,
       0
     )
   );
@@ -93,6 +125,7 @@ export default function ThreeScene() {
         <Physics gravity={[0, 2, 0]} iterations={10}>
           <Pointer />
           <Clump />
+          <TextCollider />
         </Physics>
         <Environment files="/adamsbridge.hdr" />
         <EffectComposer enableNormalPass multisampling={2}>
@@ -106,16 +139,6 @@ export default function ThreeScene() {
           />
           <SMAA />
         </EffectComposer>
-
-        {/* Text overlay */}
-        <Html center>
-          <div
-            className="text-white text-6xl font-bold"
-            style={{ fontFamily: "Antonio, sans-serif" }}
-          >
-            BizAug
-          </div>
-        </Html>
       </Canvas>
     </div>
   );

@@ -99,7 +99,7 @@ export function Outlines({
         group.remove(mesh);
       };
     }
-  }, [angle, ref.current?.parent?.geometry]);
+  }, [angle, material]);
 
   React.useLayoutEffect(() => {
     const group = ref.current;
@@ -109,7 +109,7 @@ export function Outlines({
       THREE.Material
     >;
     if (mesh) {
-      applyProps(mesh.material as any, {
+      applyProps(mesh.material, {
         transparent,
         thickness,
         color,
