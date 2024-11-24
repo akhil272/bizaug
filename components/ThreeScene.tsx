@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Outlines, Environment, Text } from "@react-three/drei";
+import { Outlines, Environment } from "@react-three/drei";
 import { Physics, useSphere, useBox } from "@react-three/cannon";
 import { EffectComposer, N8AO, SMAA } from "@react-three/postprocessing";
 
@@ -38,9 +38,7 @@ function TextCollider() {
 
   return (
     <group>
-      <Text fontSize={0.5} position={[0, 0, 4]}>
-        BizAug
-      </Text>
+      {/* <Text fontSize={0.5} position={[0, 0, 4]}></Text> */}
       {layers}
     </group>
   );
@@ -105,7 +103,7 @@ function Pointer() {
 
 export default function ThreeScene() {
   return (
-    <div className="h-screen w-screen bg-neutral-900">
+    <div className="h-full w-full bg-neutral-900">
       <Canvas
         shadows
         gl={{ antialias: false }}
