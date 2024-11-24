@@ -7,7 +7,7 @@ interface ServiceHomeCardProps {
 
 const ServiceHomeCard = ({ title, content }: ServiceHomeCardProps) => {
   return (
-    <div className="rounded-lg bg-white text-neutral-900 my-8">
+    <div className="rounded-lg bg-white text-neutral-900 lg:my-0 my-4">
       <div className="h-40 bg-slate-500" />
       <div className="p-4 flex flex-col gap-2">
         <h4 className="font-semibold text-2xl">{title}</h4>

@@ -19,7 +19,7 @@ export default function Home() {
       <div className="h-[48svh] w-svw">
         <ThreeScene />
       </div>
-      <div className="px-8 pt-8 text-white gap-4 flex flex-col">
+      <div className="pt-8 px-8 max-w-6xl mx-auto text-white gap-4 flex flex-col">
         <h2 className=" font-bold text-4xl">
           Tailored Solutions, Amplified Success
         </h2>
