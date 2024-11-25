@@ -3,13 +3,13 @@ import ChooseHomeCard from "./ChooseHomeCard";
 
 const WhyChooseSection = () => {
   return (
-    <>
-      <h5 className=" text-3xl font-bold text-center">Why Choose Us</h5>
-      <p>
+    <div className="text-center flex flex-col gap-4 py-8">
+      <h2 className="text-4xl font-bold ">Why Choose Us</h2>
+      <p className=" mb-4">
         At BizAug, we don&apos;t just offer solutions—we become a trusted
         partner in your business journey. Here&apos;s why you should choose us:
       </p>
-      <div className="grid lg:grid-cols-2 lg:gap-4">
+      <div className="grid lg:grid-cols-2 gap-4">
         <ChooseHomeCard
           title="We Listen, We Understand"
           content="Your entrepreneurial journey is unique, and we recognize that.
@@ -17,6 +17,7 @@ const WhyChooseSection = () => {
             carefully, ensuring we fully understand your goals, challenges, and
             vision. We're not just consultants—we're collaborators who
             value your insights and ambitions."
+          imageUrl="we-listen"
         />
         <ChooseHomeCard
           title="Strategic SWOT Analysis"
@@ -26,6 +27,7 @@ const WhyChooseSection = () => {
             This helps us identify not only areas for improvement but also
             untapped opportunities that can drive growth and competitive
             advantage."
+          imageUrl="swot"
         />
         <ChooseHomeCard
           title="Seamless Technology Integration"
@@ -34,9 +36,10 @@ const WhyChooseSection = () => {
         and aligned with your business's specific needs. This helps us identify
         not only areas for improvement but also untapped opportunities that can
         drive growth and competitive advantage."
+          imageUrl="seamless"
         />
       </div>
-    </>
+    </div>
   );
 };
 

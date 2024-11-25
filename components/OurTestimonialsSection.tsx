@@ -9,12 +9,12 @@ const OurTestimonialsSection = () => {
   return (
     <div className="text-center flex flex-col gap-4 py-8">
       <h2 className="text-4xl font-bold ">Our Testimonials</h2>
-      <p className="max-w-2xl mx-auto mb-4">
+      <p className=" mb-4">
         Don&apos;t just take our word for it; hear what our satisfied clients
         have to say about their experience with BizAug. We take pride in
         building lasting relationships and delivering exceptional results.
       </p>
-      <div className="max-w-3xl mx-auto w-full">
+      <div className=" w-full">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
@@ -33,6 +33,7 @@ const OurTestimonialsSection = () => {
               content="Working with BizAug was a pleasure. Their web design team created a
                 stunning website that perfectly captured our brand's essence. The
                 feedback from our customers has been overwhelmingly positive."
+              imageUrl="bibin"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -40,6 +41,7 @@ const OurTestimonialsSection = () => {
               name="Priya Sharma"
               businessName="GreenField Organics"
               content="BizAug transformed our online presence with their outstanding design and SEO strategies. We've seen a significant increase in traffic and engagement since working with them."
+              imageUrl="priya"
             />
           </SwiperSlide>
         </Swiper>
