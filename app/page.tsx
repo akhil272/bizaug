@@ -4,9 +4,7 @@ import OurServicesSection from "@/components/OurServicesSection";
 import OurTestimonialsSection from "@/components/OurTestimonialsSection";
 import { Button } from "@/components/ui/button";
 import WhyChooseSection from "@/components/WhyChooseSection";
-import { Facebook, Instagram, MenuIcon } from "lucide-react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 
 const ThreeScene = dynamic(() => import("@/components/ThreeScene"), {
   ssr: false,
