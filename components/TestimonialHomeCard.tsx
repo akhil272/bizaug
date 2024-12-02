@@ -15,12 +15,13 @@ const TestimonialHomeCard = ({
 }: TestimonialHomeCardProps) => {
   return (
     <div className="flex bg-white text-neutral-900 rounded-lg lg:items-center">
-      <div className="relative lg:min-h-72 w-2/5">
+      <div className="relative lg:max-h-72 w-2/5">
         <Image
           src={`/assets/images/${imageUrl}.jpg`}
           alt={name}
-          layout="fill"
-          objectFit="cover"
+          width={300}
+          height={300}
+          className="object-cover h-full w-full"
         />
       </div>
       <div className="flex flex-col p-4 text-left w-3/5">

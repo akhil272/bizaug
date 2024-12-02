@@ -13,9 +13,9 @@ const ChooseHomeCard = ({ title, content, imageUrl }: ChooseHomeCardProps) => {
         <Image
           src={`/assets/images/${imageUrl}.jpg`}
           alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
+          height={200}
+          width={200}
+          className="rounded-full object-cover h-20 w-20"
         />
       </div>
       <h5 className="text-2xl font-bold text-center">{title}</h5>

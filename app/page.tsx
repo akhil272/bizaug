@@ -37,7 +37,7 @@ export default function Home() {
         <WhyChooseSection />
         <OurServicesSection />
         <OurTestimonialsSection />
-        <div className="text-center pb-8">
+        <div className="text-center pb-16">
           <h4 className="text-2xl font-semibold">
             Ready to Transform Your Digital Presence?
           </h4>
@@ -45,8 +45,8 @@ export default function Home() {
             Take the first step towards digital success with BizAug by your
             side.
           </p>
-          <p className="mt-8">Unlock Your Digital Potential Today</p>
-          <Button className="w-full bg-white text-black font-bold">
+          <p className="mt-8 mb-4">Unlock Your Digital Potential Today</p>
+          <Button className="w-full bg-white text-black font-bold ">
             Get Started
           </Button>
         </div>

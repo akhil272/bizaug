@@ -14,18 +14,21 @@ const ServiceHomeCard = ({
 }: ServiceHomeCardProps) => {
   return (
     <div className="rounded-lg bg-white text-neutral-900 lg:my-0 my-4">
-      <div className="relative h-40 ">
+      <div className="relative h-40">
         <Image
           src={`/assets/images/${imageUrl}.jpg`}
+          width={320}
+          height={320}
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="p-4 flex flex-col gap-2">
         <h4 className="font-semibold text-2xl">{title}</h4>
         <p>{content}</p>
-        <Button className="text-white w-full ">Learn More</Button>
+        <Button className="text-white w-full hover:bg-primary/90 ">
+          Learn More
+        </Button>
       </div>
     </div>
   );
