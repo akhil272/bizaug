@@ -26,7 +26,7 @@ const ServiceHomeCard = ({
       <div className="p-4 flex flex-col gap-2">
         <h4 className="font-semibold text-2xl">{title}</h4>
         <p>{content}</p>
-        <Button className="text-white w-full hover:bg-primary/90 ">
+        <Button className="text-secondary w-full hover:bg-primary/90 ">
           Learn More
         </Button>
       </div>
