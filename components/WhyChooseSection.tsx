@@ -31,11 +31,11 @@ const WhyChooseSection = () => {
         />
         <ChooseHomeCard
           title="Seamless Technology Integration"
-          content="We conduct an in-depth SWOT (Strengths, Weaknesses, Opportunities,
-        Threats) analysis to ensure that every decision we make is data-driven
-        and aligned with your business's specific needs. This helps us identify
-        not only areas for improvement but also untapped opportunities that can
-        drive growth and competitive advantage."
+          content="At BizAug, we specialize in seamless technology
+        integration, ensuring that new systems align perfectly with your
+        existing infrastructure. Our expert approach minimizes disruptions,
+        accelerates adoption, and empowers your team to harness the full
+        potential of advanced technologies with confidence and ease."
           imageUrl="seamless"
         />
       </div>

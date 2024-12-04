@@ -12,7 +12,7 @@ const ThreeScene = dynamic(() => import("@/components/ThreeScene"), {
 
 export default function Home() {
   return (
-    <div className="bg-primary text-secondary">
+    <div className="bg-background text-secondary">
       <div className="lg:flex lg:items-center">
         <div className="h-[48svh] lg:w-1/2 lg:h-[100svh]">
           <ThreeScene />

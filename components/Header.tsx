@@ -58,7 +58,10 @@ const Header = () => {
         <MenuIcon />
       </button>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side={"right"} className="p-4 py-16 bg-background">
+        <SheetContent
+          side={"right"}
+          className="p-4 py-16 bg-background border-primary"
+        >
           <div className="justify-between flex flex-col h-[92svh] text-secondary">
             <div>
               <div className="text-4xl font-bold pb-16">BizAug</div>
