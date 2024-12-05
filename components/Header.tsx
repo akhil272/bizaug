@@ -89,7 +89,7 @@ const Header = () => {
 
       {/* Desktop Header */}
       <div className="justify-center items-center h-full flex">
-        <div className="hidden lg:flex w-full items-center justify-between max-w-4xl ">
+        <div className="hidden lg:flex w-full items-center justify-between max-w-5xl ">
           <div className="flex items-center gap-4">
             <Image
               src={"/assets/images/bizaug-logo.png"}
