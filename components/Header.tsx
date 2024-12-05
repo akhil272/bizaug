@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Sheet, SheetContent } from "./ui/sheet";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 type RouteConfig = {
   title: string;
@@ -52,11 +52,16 @@ const NavigationLineItem = ({
 const Header = () => {
   const [open, setOpen] = useState(false);
   const activeRoute = usePathname();
+  const router = useRouter();
+
+  const onClickLogo = () => {
+    router.push("/");
+  };
   return (
     <header className="h-[8svh] z-20 text-2xl bg-secondary lg:bg-background font-bold w-full px-4  text-primary">
       {/* Mobile Header */}
       <div className="flex h-full items-center justify-between lg:hidden">
-        <div>BizAug</div>
+        <div onClick={onClickLogo}>BizAug</div>
         <button onClick={() => setOpen(true)}>
           <MenuIcon />
         </button>
@@ -88,9 +93,12 @@ const Header = () => {
       </div>
 
       {/* Desktop Header */}
-      <div className="justify-center items-center h-full flex">
+      <div className="justify-center items-center h-full flex select-none">
         <div className="hidden lg:flex w-full items-center justify-between max-w-5xl ">
-          <div className="flex items-center gap-4">
+          <div
+            onClick={onClickLogo}
+            className="flex items-center gap-4 cursor-pointer"
+          >
             <Image
               src={"/assets/images/bizaug-logo.png"}
               width={48}

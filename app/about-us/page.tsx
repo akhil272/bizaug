@@ -8,7 +8,7 @@ const AboutUs = () => {
         <Image
           width={477}
           height={716}
-          className="lg:w-1/2 w-full h-72 lg:h-[80svh]"
+          className="lg:w-1/2 w-full h-72 lg:h-[80svh] object-cover object-top"
           src={"/assets/images/about-us-cover.jpg"}
           alt={"about-us-cover-bizaug"}
         />
