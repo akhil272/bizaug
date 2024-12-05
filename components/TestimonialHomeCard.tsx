@@ -14,14 +14,14 @@ const TestimonialHomeCard = ({
   imageUrl,
 }: TestimonialHomeCardProps) => {
   return (
-    <div className="flex bg-white text-neutral-900 rounded-lg lg:items-center">
+    <div className="flex bg-secondary text-primary rounded-lg lg:items-center">
       <div className="relative lg:max-h-72 w-2/5">
         <Image
           src={`/assets/images/${imageUrl}.jpg`}
           alt={name}
           width={300}
           height={300}
-          className="object-cover h-full w-full"
+          className=" h-full w-full object-cover"
         />
       </div>
       <div className="flex flex-col p-4 text-left w-3/5">

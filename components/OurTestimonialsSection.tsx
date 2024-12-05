@@ -38,10 +38,10 @@ const OurTestimonialsSection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialHomeCard
-              name="Priya Sharma"
-              businessName="GreenField Organics"
+              name="Sijo Varghese"
+              businessName="Optic World"
               content="BizAug transformed our online presence with their outstanding design and SEO strategies. We've seen a significant increase in traffic and engagement since working with them."
-              imageUrl="priya"
+              imageUrl="sijo-varghese-bizaug"
             />
           </SwiperSlide>
         </Swiper>

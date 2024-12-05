@@ -13,7 +13,7 @@ const ServiceHomeCard = ({
   imageUrl,
 }: ServiceHomeCardProps) => {
   return (
-    <div className="rounded-lg bg-white text-neutral-900 lg:my-0 my-4">
+    <div className="rounded-lg bg-secondary text-primary lg:my-0 my-4">
       <div className="relative h-40">
         <Image
           src={`/assets/images/${imageUrl}.jpg`}
