@@ -25,7 +25,7 @@ export default function Home() {
         <div className="h-[48svh] lg:w-1/2 lg:h-[100svh]">
           <ThreeScene />
         </div>
-        <div className="pt-8 px-8 lg:w-1/2 mx-auto lg:h-[100svh] lg:justify-center lg:flex lg:flex-col ">
+        <div className=" pt-8 px-8 lg:w-1/2 mx-auto lg:h-[100svh] lg:justify-center lg:flex lg:flex-col ">
           <h2 className="font-doto font-bold text-4xl lg:text-8xl mt-auto ">
             Tailored Solutions, Amplified{" "}
             <span className="text-yellow-500">Success</span>
