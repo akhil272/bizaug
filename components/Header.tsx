@@ -58,7 +58,7 @@ const Header = () => {
     router.push("/");
   };
   return (
-    <header className="h-[8svh] z-20 text-2xl bg-secondary lg:bg-background font-bold w-full px-4  text-primary">
+    <header className="h-[8svh] z-20 text-2xl bg-secondary lg:bg-background font-bold w-full px-4  text-primary select-none">
       {/* Mobile Header */}
       <div className="flex h-full items-center justify-between lg:hidden">
         <div onClick={onClickLogo}>BizAug</div>
