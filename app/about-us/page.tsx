@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center py-4 lg:py-10">
       <div className="lg:flex gap-4 text-secondary px-4 max-w-5xl mx-auto">
         <Image
           width={300}
