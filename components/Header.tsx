@@ -52,7 +52,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const activeRoute = usePathname();
   return (
-    <header className="h-[8svh] text-2xl bg-secondary font-bold lg:hidden w-full justify-between flex px-4 py-6 text-primary ">
+    <header className="h-[8svh] z-20 text-2xl bg-secondary font-bold lg:hidden w-full justify-between flex px-4 py-6 text-primary ">
       BizAug
       <button onClick={() => setOpen(true)}>
         <MenuIcon />
