@@ -49,13 +49,13 @@ const NavigationLineItem = ({
   );
 };
 
-const MobileHeader = () => {
+const Header = () => {
   const [open, setOpen] = useState(false);
   const activeRoute = usePathname();
   return (
-    <header className="h-[8svh] z-20 text-2xl bg-secondary lg:bg-background font-bold w-full px-4 py-6 text-primary">
+    <header className="h-[8svh] z-20 text-2xl bg-secondary lg:bg-background font-bold w-full px-4  text-primary">
       {/* Mobile Header */}
-      <div className="flex justify-between lg:hidden">
+      <div className="flex h-full items-center justify-between lg:hidden">
         <div>BizAug</div>
         <button onClick={() => setOpen(true)}>
           <MenuIcon />
@@ -88,7 +88,7 @@ const MobileHeader = () => {
       </div>
 
       {/* Desktop Header */}
-      <div className="justify-center flex">
+      <div className="justify-center items-center h-full flex">
         <div className="hidden lg:flex w-full items-center justify-between max-w-4xl ">
           <div className="flex items-center gap-4">
             <Image
@@ -117,15 +117,6 @@ const MobileHeader = () => {
         </div>
       </div>
     </header>
-  );
-};
-
-const Header = () => {
-  return (
-    <>
-      <MobileHeader />
-      <div>Hello</div>
-    </>
   );
 };
 

@@ -179,7 +179,7 @@ function Scene() {
       onTouchStart={handleInteraction}
     >
       <ambientLight intensity={0.5} />
-      <color attach="background" args={["#1a1a1a"]} />
+      <color attach="background" args={["#131616"]} />
       <spotLight
         intensity={1}
         angle={0.2}
@@ -211,7 +211,7 @@ function Scene() {
 
 export default function ThreeScene() {
   return (
-    <div className="h-full w-full bg-neutral-900">
+    <div className="h-full w-full">
       <Scene />
     </div>
   );
