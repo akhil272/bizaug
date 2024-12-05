@@ -44,7 +44,6 @@ const ContactUs = () => {
     try {
       setIsSubmitting(true);
       console.log("Form submission started:", data);
-
       const response = await fetch("/api/contact-us", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
