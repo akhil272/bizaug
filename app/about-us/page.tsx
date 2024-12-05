@@ -4,11 +4,11 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div className="flex justify-center items-center py-4 lg:py-10">
-      <div className="lg:flex gap-4 text-secondary px-4 max-w-5xl mx-auto">
+      <div className="lg:flex gap-8 text-secondary px-4 lg:px-0 max-w-5xl mx-auto">
         <Image
-          width={300}
-          height={500}
-          className="lg:w-1/2 w-full h-72 lg:h-full object-cover object-top "
+          width={477}
+          height={716}
+          className="lg:w-1/2 w-full h-72 lg:h-[80svh]"
           src={"/assets/images/about-us-cover.jpg"}
           alt={"about-us-cover-bizaug"}
         />

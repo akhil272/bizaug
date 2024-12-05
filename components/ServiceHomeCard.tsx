@@ -17,8 +17,8 @@ const ServiceHomeCard = ({
       <div className="relative h-40">
         <Image
           src={`/assets/images/${imageUrl}.jpg`}
-          width={320}
-          height={320}
+          width={500}
+          height={500}
           alt={title}
           className="object-cover w-full h-full"
         />

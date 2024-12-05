@@ -28,7 +28,7 @@ const OurServicesSection = () => {
         <ServiceHomeCard
           title="Web Development"
           content="Tailored solutions to meet specific business needs."
-          imageUrl="website-dev"
+          imageUrl="web-dev-cover"
         />
       </div>
     </div>

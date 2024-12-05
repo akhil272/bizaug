@@ -5,12 +5,20 @@ import OurTestimonialsSection from "@/components/OurTestimonialsSection";
 import { Button } from "@/components/ui/button";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 const ThreeScene = dynamic(() => import("@/components/ThreeScene"), {
   ssr: false,
 });
 
 export default function Home() {
+  const router = useRouter();
+  const handleExploreOurService = () => {
+    router.push("/our-services");
+  };
+  const handleGetStarted = () => {
+    router.push("/contact-us");
+  };
   return (
     <div className="bg-background text-secondary">
       <div className="lg:flex lg:items-center">
@@ -26,7 +34,10 @@ export default function Home() {
             <p className="text-neutral-300">
               Custom software development to augment your business operations
             </p>
-            <Button className="text-neutral-900 bg-white p-4 my-10 w-2/4">
+            <Button
+              onClick={handleExploreOurService}
+              className="text-neutral-900 bg-white p-4 my-10 w-2/4"
+            >
               Explore Our Service
             </Button>
           </div>
@@ -46,7 +57,10 @@ export default function Home() {
             side.
           </p>
           <p className="mt-8 mb-4">Unlock Your Digital Potential Today</p>
-          <Button className="w-full bg-white text-black font-bold ">
+          <Button
+            onClick={handleGetStarted}
+            className="w-full bg-white text-black font-bold "
+          >
             Get Started
           </Button>
         </div>
