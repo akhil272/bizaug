@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -43,6 +45,7 @@ export default function RootLayout({
         <Footer />
         <Toaster richColors />
       </body>
+      <GoogleAnalytics gaId="G-RJTW693E5N" />
     </html>
   );
 }
